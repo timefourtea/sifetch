@@ -1,0 +1,7 @@
+FROM fedora:latest
+
+COPY . .
+RUN dnf -y install make gcc
+RUN make build
+
+CMD ["/sifetch"]
