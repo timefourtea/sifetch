@@ -6,27 +6,33 @@
 const char *get_os_id() {
 	FILE *f = fopen("/etc/os-release", "r");	
 	char os_id[50];
-	char *name = malloc(sizeof(os_id));
+	char *name_malloc = malloc(sizeof(os_id));
 	
-	for(;(strncmp(name, "ID=",3) != 0);) {
-		fgets(name, sizeof(os_id), f);
+	for(;(strncmp(name_malloc, "ID=",3) != 0);) {
+		fgets(name_malloc, sizeof(os_id), f);
 	}
 
 	fclose(f);
+	char name[50];
+	name[49] = *name_malloc;
 	const char *name_return = name;
+	free(name_malloc);
 	return name_return;
 }
 
 const char *get_os_pretty_name() {	
 	FILE *f = fopen("/etc/os-release", "r");	
 	char os_name[50];
-	char *name = malloc(sizeof(os_name));
+	char *name_malloc = malloc(sizeof(os_name));
 	
-	for(;(strncmp(name, "PRETTY_NAME=",5) != 0);) {
-		fgets(name, sizeof(os_name), f);
+	for(;(strncmp(name_malloc, "PRETTY_NAME=",5) != 0);) {
+		fgets(name_malloc, sizeof(os_name), f);
 	}
 
 	fclose(f);
+	char name[50];
+	name[49] = *name_malloc;
 	const char *name_return = name;
+	free(name_malloc);
 	return name_return;
 }
