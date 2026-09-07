@@ -14,7 +14,7 @@ const char *get_os_id() {
 
 	fclose(f);
 	char name[50];
-	name[49] = *name_malloc;
+	strcpy(name, name_malloc);
 	const char *name_return = name;
 	free(name_malloc);
 	return name_return;
@@ -31,7 +31,7 @@ const char *get_os_pretty_name() {
 
 	fclose(f);
 	char name[50];
-	name[49] = *name_malloc;
+	strcpy(name, name_malloc);
 	const char *name_return = name;
 	free(name_malloc);
 	return name_return;
