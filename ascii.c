@@ -5,7 +5,7 @@
 const char * os_logo(const char *os_name) {
 	const char *logo;
 
-	if(strcmp(os_name,"arch\n") == 0) {
+	if(strncmp(os_name,"arch",4) == 0) {
 		logo = "\x1b[1;36m        /\\\n"
 		       "       /  \\\n"
 		       "      /    \\\n"
@@ -16,7 +16,7 @@ const char * os_logo(const char *os_name) {
 		       " /_---      ---_\\\n\x1b[0m";
 		return logo;
 	}
-	if (strcmp(os_name,"fedora\n") == 0) {
+	if (strncmp(os_name,"fedora",6) == 0) {
 		logo = "   ________\n"
 		       "  /     ___ \\\n"
 		       " /     |   | \\\n"
