@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define VERSION "sifetch v0.1.0"
+#define VERSION "sifetch v0.1.1"
 
 int main(int argc, char *argv[]) {
 	if(argc > 1) {
