@@ -20,16 +20,13 @@ const char *get_os_id() {
 const char *get_os_pretty_name() {	
 	FILE *f = fopen("/etc/os-release", "r");	
 	char line[50];
-	char *key;
 	char *value;
 	while(fgets(line,sizeof(line),f)) {
 		char *s = strchr(line,'=');
 		if(s != NULL) {
-			*s = '\0';
-			key = line;
 			value = s+1;
 		}
-		if(strcmp(key,"PRETTY_NAME") == 0) {
+		if(strncmp(line,"PRETTY_NAME",11) == 0) {
 			char *q = strchr(value,'"');
 			if(q != NULL) {
 				char *q = strchr(value,'"'); // repeat 2 times to remove the double quotes
