@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
 		}
 	}
 	printf("\n%s\n",os_logo(get_os_id()));
-	printf("%s",get_os_pretty_name());
+	printf("Operating system:%s",get_os_pretty_name());
 	printf("Total RAM: %.2f GB\n",get_mem_total());
 	printf("RAM free: %.2f GB\n", get_mem_free());
 	printf("Total RAM used: %.2f GB\n", get_mem_used_total());
