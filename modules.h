@@ -1,5 +1,5 @@
-#ifndef FUNCTIONS_H
-#define FUNCTIONS_H
+#ifndef MODULES_H
+#define MODULES_H
 
 const char *get_os_id();
 const char *get_os_pretty_name();
