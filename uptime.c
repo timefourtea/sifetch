@@ -22,12 +22,6 @@ int get_uptime(const char *type) {
 	return 1;
 }
 
-int format_uptime_h(int unformatted_time) {
-	int formatted_time = unformatted_time / 3600;
-	formatted_time = (formatted_time < 1) ? 0: formatted_time;
-	return formatted_time;
-}
-
 void print_formatted_uptime(int unformatted_time) {
 	int day = 0;
 	int hour = 0;

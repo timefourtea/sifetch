@@ -9,7 +9,6 @@ float get_mem_used_total();
 float get_mem_available();
 const char * os_logo(const char *os_name);
 int get_uptime(const char *type);
-int format_uptime_h(int unformatted_time);
 void print_formatted_uptime(int unformatted_time);
 
 #endif
