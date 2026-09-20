@@ -16,6 +16,7 @@ int main(int argc, char *argv[]) {
 	printf("Total RAM: %.2f GB\n",get_mem_total());
 	printf("RAM free: %.2f GB\n", get_mem_free());
 	printf("Total RAM used: %.2f GB\n", get_mem_used_total());
+	printf("RAM Available: %.2f GB\n", get_mem_available());
 	printf("Uptime: ");
 	print_formatted_uptime(get_uptime("system"));
 	if(getenv("XDG_CURRENT_DESKTOP") != NULL)
